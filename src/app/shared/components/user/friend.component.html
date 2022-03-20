@@ -1,0 +1,19 @@
+<div class="card product friend-segment">
+    <div class="card-header">
+        <h4>{{friend.name}}</h4>
+    </div>
+    <div>
+        <button
+    [routerLink] = "['/friends']"
+    class="btn btn-dark add-friend-btn"
+    (click) = "addFriend(friend)"
+    [disabled]="checkFriendsList(friend.id)"
+    >Add Friend</button>
+    <button
+    class="btn btn-primary rem-friend-btn"
+    (click) = "removeFriend(friend)"
+    >Remove Friend</button>
+    </div>
+</div>
+
+

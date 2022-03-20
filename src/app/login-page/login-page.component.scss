@@ -1,0 +1,16 @@
+.login-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+form{
+    background: #FFFFFF;
+    position: fixed;
+    max-width: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+}

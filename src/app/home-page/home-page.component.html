@@ -1,0 +1,37 @@
+<h1>Games</h1>
+<form (submit)="searchProducts()">
+    <input type="text" class="form-control" [(ngModel)]="searchInput" name="searchInput">
+    <button class="btn btn-primary">Search</button>
+</form>
+
+
+<h2>Featured Games</h2>
+
+<div class="col-container">
+    <div class="games col" *ngIf = "products$ | async as products; else loader ">
+        <div class="grid-container">
+            <app-item *ngFor = "let product of products" [product] = "product">
+            </app-item>
+        </div>
+    </div>
+    <aside class="search-mods col">
+        <h3>Filter by price</h3>
+        <div class="slider-container">
+            <mat-slider #mySlider
+            class="slider"
+            thumbLabel
+            (change)="filterBySlider(mySlider.value)" 
+            [min]="rangeMin" 
+            [max]="rangeMax" step="1" 
+            [value]="rangeMax" 
+            color="primary"></mat-slider>
+        </div>
+    </aside>    
+</div>
+
+<ng-template  #loader>
+    <h3 class="empty text-center">Loading Games...</h3>
+</ng-template>
+
+
+

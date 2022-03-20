@@ -1,0 +1,12 @@
+.product{
+    height: 100%;
+    position: relative;
+    margin-bottom: 1.25em;
+    .price{
+        min-width: 20%;
+    }
+    .buttons{
+        position: absolute;
+        bottom: .5em;
+    }
+}

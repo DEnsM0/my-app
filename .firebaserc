@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "steam-app-45b82"
+  },
+  "targets": {
+    "steam-app-45b82": {
+      "hosting": {
+        "steam-app": [
+          "steam-app-45b82"
+        ]
+      }
+    }
+  }
+}

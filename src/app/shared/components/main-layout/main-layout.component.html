@@ -1,0 +1,26 @@
+<nav class="navbar-main">
+    <nav class="navbar bg-primary">
+      <ul>
+        <li>
+          <a routerLink="/">Steam</a>
+        </li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <a routerLink="/">Games</a>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/library']">Library</a>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/friends']">Friends</a>
+        </li>
+        <li routerLinkActive="active">
+          <a [routerLink]="['/profile']">Profile</a>
+        </li>
+      </ul>
+    </nav>
+  </nav>
+  <div class="container" [class.active]="_router.url == '/profile'">
+    <router-outlet></router-outlet>
+  </div>
+
+  

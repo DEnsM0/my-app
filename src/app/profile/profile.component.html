@@ -1,0 +1,55 @@
+<div class="login-container" >
+    <form class="card" [formGroup]="form" (ngSubmit)="submit()">
+      <h2>Profile</h2>
+      <div
+      class="form-control"
+    >
+      <label for="username">Username</label>
+      <input id="username" type="text" formControlName="username" placeholder="{{userName}}" (input) = "checkValue()">
+      <div
+        class="validation"
+        *ngIf="form.get('username').touched && form.get('username').invalid"
+      >
+      <small *ngIf="form.get('email').errors.email">
+        Entered name is invalid
+      </small>
+      </div>
+    </div>
+      <div
+        class="form-control"
+      >
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" placeholder="{{userEmail}}" (input) = "checkValue()">
+        <div
+          *ngIf="form.get('email').touched && form.get('email').invalid"
+          class="validation"
+        >
+        <small *ngIf="form.get('email').errors.email">
+          Entered adress is invalid
+        </small>
+        </div>
+        
+      </div>
+  
+      <div
+        class="form-control"
+      >
+        <label for="age">Age</label>
+        <input id="age" type="number" formControlName="age" placeholder="{{userAge}}" (input) = "checkValue()">
+        <div
+          class="validation"
+          *ngIf="form.get('age').touched && form.get('age').invalid"
+        >
+        <small *ngIf="form.get('email').errors.email">
+          Entered age is invalid
+        </small>
+        </div>
+      </div>
+  
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="form.invalid || noInput"
+      >Save</button>
+    </form>
+  </div>

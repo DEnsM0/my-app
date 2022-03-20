@@ -1,0 +1,19 @@
+
+<div *ngIf = "!loading; else loader">
+    <div *ngIf = "!empty;else none">
+        <h2>My Games</h2>
+        <div class="games" *ngIf = "products$ | async as products ">
+            <div class="grid-container">
+                <app-item *ngFor = "let product of products" [product] = "product">
+                </app-item>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template  #loader>
+    <h3 class="empty text-center">Loading your Library...</h3>
+</ng-template>
+
+<ng-template  #none>
+    <h3 class="empty text-center">Your Library is empty...</h3>
+</ng-template>

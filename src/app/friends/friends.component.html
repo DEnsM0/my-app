@@ -1,0 +1,33 @@
+<h1>Friends</h1>
+<h3>Search Friends</h3>
+<form (submit)="searchFriends()">
+    <input type="text" class="form-control" [(ngModel)]="searchInput" name="searchInput" placeholder="Search Friends">
+    <button class="btn btn-primary">Search</button>
+</form>
+<div class="searchFriends">
+    <div *ngIf = "friends$ | async as friends ">
+        <div>
+            <app-friend (update)="getMyFriends($event)" *ngFor = "let friend of friends" [friend] = "friend">
+            </app-friend>
+        </div>
+    </div>
+</div>
+<div class="myFriends">
+    <h2>My Friends</h2>
+    <div *ngIf = "!loading; else loader">
+        <div *ngIf = "!nofriends; else none ">
+            <div  *ngIf = "myfriends$ | async as myfriends">
+                <div>
+                    <app-friend  (update)="getMyFriends($event)" *ngFor = "let friend of myfriends" [friend] = "friend">
+                    </app-friend>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template  #none>
+        <h3 class="empty text-center">You don't have any friends yet...</h3>
+    </ng-template>
+    <ng-template  #loader>
+        <h3 class="empty text-center">Loading your Friends List...</h3>
+    </ng-template>
+</div>

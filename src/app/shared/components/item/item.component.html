@@ -1,0 +1,28 @@
+<div class="card product">
+    <div class="card-header">
+        <h4>{{product.title}}</h4>
+        <span class="price" *ngIf="_router.url != '/library'">{{product.price}} &#8372;</span>
+    </div>
+    <div>
+        <p>{{product.text}}</p>
+    </div>
+    <div class="buttons">
+        <button
+    [routerLink] = "['/library']"
+    class="btn btn-dark"
+    (click) = "addProduct(product)"
+    [disabled]="checkLibrary(product.id)"
+    *ngIf="_router.url != '/library'"
+    >Add to Library</button>
+    <button
+    class="btn btn-primary"
+    *ngIf="_router.url != '/'"
+    >Download</button>
+    <button
+    class="btn btn-dark"
+    *ngIf="_router.url != '/'"
+    >Share</button>
+    </div>
+</div>
+
+
