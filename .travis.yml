@@ -4,7 +4,6 @@ node_js:
 
 before_install:
 - npm install -g @angular/cli
-- npm install -g mocha 
 install: npm install
 
 branches:
@@ -15,5 +14,7 @@ deploy:
   provider: heroku
   app: my-own-steam-app
   api_key:
-    secure: "c6c0a8eb-e7fc-4acb-aff8-a44dbe12350c"
+  secure: "c6c0a8eb-e7fc-4acb-aff8-a44dbe12350c"
+
+script: 'true'
 
