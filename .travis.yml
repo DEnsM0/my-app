@@ -10,8 +10,7 @@ branches:
   only:
   - main
 
-script: 
-  -npm test
+script: "true"
 
 deploy:
   provider: heroku
