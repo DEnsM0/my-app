@@ -22,3 +22,6 @@ deploy:
   app: my-own-steam-app
   api_key:
     secure: "c6c0a8eb-e7fc-4acb-aff8-a44dbe12350c"
+
+  script:
+  - npm run test-server
