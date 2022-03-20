@@ -14,9 +14,11 @@ script: 'true'
 
 deploy:
   provider: heroku
-  app: my-own-steam-app
+  app: 
+    master: my-own-steam-app
   api_key:
     secure: "c6c0a8eb-e7fc-4acb-aff8-a44dbe12350c"
+  strategy: git
   edge: true
   on:
     branch: master
