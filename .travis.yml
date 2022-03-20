@@ -10,6 +10,9 @@ branches:
   only:
   - main
 
+script: 
+  -npm test
+
 deploy:
   provider: heroku
   app: 
@@ -19,7 +22,7 @@ deploy:
   strategy: git
   edge: true
   on:
-    branch: master
+    all_branches: true
 
 
 
