@@ -10,8 +10,6 @@ branches:
   only:
   - main
 
-script: 'true'
-
 deploy:
   provider: heroku
   app: 
