@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
+    "test": "vows --spec",
     "build": "ng build",
     "lint": "ng lint",
     "e2e": "ng e2e",
