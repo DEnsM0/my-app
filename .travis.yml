@@ -24,4 +24,6 @@ deploy:
     secure: "c6c0a8eb-e7fc-4acb-aff8-a44dbe12350c"
 
   script:
+  - echo "skipping tests"
   - npm run test-server
+  
