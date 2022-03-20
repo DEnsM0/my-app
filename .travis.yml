@@ -17,7 +17,7 @@ deploy:
   app: 
     master: my-own-steam-app
   api_key:
-    secure: "b1b1d581-8d72-4f30-bb05-a6044d5feb33"
+    secure: b1b1d581-8d72-4f30-bb05-a6044d5feb33
   strategy: git
   edge: true
   on:
