@@ -10,7 +10,7 @@ branches:
   only:
   - main
 
-script: "true"
+script: echo "npm test temporarily disabled"
 
 deploy:
   provider: heroku
